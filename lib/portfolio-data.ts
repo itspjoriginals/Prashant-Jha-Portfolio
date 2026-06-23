@@ -66,6 +66,11 @@ export const projectItems = [
     type: 'Full Stack File Sharing Platform',
     description: 'Modern file-sharing experience with secure upload flows, authentication and intuitive user controls.',
     tech: ['Next.js', 'Node.js', 'MongoDB', 'AWS S3', 'JWT', 'Nodemailer'],
+    liveUrl: '#',
+    repo: 'https://github.com/itspjoriginals/snapshare-Frontend/',
+    screenshots: [
+      'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80'
+    ],
     highlights: ['Built secure sharing workflows.', 'Implemented protected routes and email flows.', 'Focused on polished UX and reliable file handling.']
   },
   {
@@ -73,6 +78,11 @@ export const projectItems = [
     type: 'Productivity Web App',
     description: 'A clean task manager with structured workflows, CRUD operations and frontend/backend integration.',
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
+    liveUrl: '#',
+    repo: '#',
+    screenshots: [
+      'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80'
+    ],
     highlights: ['Delivered interactive task flows.', 'Integrated frontend with API-backed data persistence.']
   },
   {
@@ -80,6 +90,11 @@ export const projectItems = [
     type: 'Frontend Web App',
     description: 'A responsive movie discovery interface powered by external APIs and reusable UI components.',
     tech: ['React.js', 'JavaScript', 'API Integration', 'Tailwind CSS'],
+    liveUrl: '#',
+    repo: 'https://github.com/itspjoriginals/Namaste-React/tree/main/Day14-NetflixGPT/netflix-gpt',
+    screenshots: [
+      'https://images.unsplash.com/photo-1517604931447-e0bedb6f1f89?auto=format&fit=crop&w=1200&q=80'
+    ],
     highlights: ['Built dynamic browsing experiences.', 'Focused on reusable components and content clarity.']
   },
   {
@@ -87,6 +102,11 @@ export const projectItems = [
     type: 'Service / Utility Platform',
     description: 'A service comparison platform with clear conversion-focused UI and scalable frontend architecture.',
     tech: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'API Integration'],
+    liveUrl: '#',
+    repo: 'https://github.com/itspjoriginals/Switch',
+    screenshots: [
+      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80'
+    ],
     highlights: ['Designed conversion-driven interfaces.', 'Delivered responsive architecture and shared UI patterns.']
   }
 ];

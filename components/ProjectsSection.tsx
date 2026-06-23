@@ -1,7 +1,15 @@
+"use client";
+
 import SectionHeading from './SectionHeading';
 import { projectItems } from '@/lib/portfolio-data';
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { cardHover } from './motion/variants';
+import ProjectModal from './ProjectModal';
 
 export default function ProjectsSection() {
+  const [selected, setSelected] = useState<any>(null);
+
   return (
     <section id="projects" className="py-24">
       <div className="container">
@@ -9,7 +17,14 @@ export default function ProjectsSection() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {projectItems.map((project) => (
-            <article key={project.name} className="group overflow-hidden rounded-[32px] border border-brand-muted/70 bg-white p-8 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-strong">
+            <motion.article
+              key={project.name}
+              initial="rest"
+              whileHover="hover"
+              animate="rest"
+              variants={cardHover}
+              className="group overflow-hidden rounded-[32px] border border-brand-muted/70 bg-white p-8 shadow-soft"
+            >
               <div className="space-y-4">
                 <div className="inline-flex rounded-full bg-brand-accent/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-brand-accent">
                   {project.type}
@@ -34,16 +49,21 @@ export default function ProjectsSection() {
                 </div>
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
-                <button className="rounded-xl border border-brand-charcoal px-5 py-3 text-sm font-semibold text-brand-charcoal transition hover:border-brand-accent hover:text-brand-accent focus-visible:outline-brand-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
+                <button onClick={() => setSelected(project)} className="rounded-xl border border-brand-charcoal px-5 py-3 text-sm font-semibold text-brand-charcoal transition hover:border-brand-accent hover:text-brand-accent focus-visible:outline-brand-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
                   View details
                 </button>
-                <button className="rounded-xl bg-brand-charcoal px-5 py-3 text-sm font-semibold text-white transition hover:bg-black focus-visible:outline-brand-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
-                  Explore repo
-                </button>
+                <a href={project.liveUrl ?? '#'} target="_blank" rel="noreferrer" className="rounded-xl bg-brand-charcoal px-5 py-3 text-sm font-semibold text-white transition hover:bg-black focus-visible:outline-brand-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
+                  View live
+                </a>
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
+
+        {/* Project modal */}
+        <AnimatePresence>
+          {selected ? <ProjectModal project={selected} onClose={() => setSelected(null)} /> : null}
+        </AnimatePresence>
       </div>
     </section>
   );
