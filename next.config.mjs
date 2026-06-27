@@ -4,6 +4,7 @@ const nextConfig = {
     serverActions: {
       directed: true,
     },
+    devtoolSegmentExplorer: false,
   },
 };
 
