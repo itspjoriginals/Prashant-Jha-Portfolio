@@ -53,8 +53,8 @@ export default function ChatAssistant() {
   };
 
   return (
-    <section id="assistant" className="flex h-full flex-col rounded-[24px] border border-slate-200/80 bg-white/95 p-3 shadow-[0_12px_32px_rgba(0,0,0,0.08)]">
-      <div className="mb-3 flex items-center justify-between gap-3 rounded-[20px] bg-brand-charcoal px-3 py-3 text-white">
+    <section id="assistant" className="flex h-full flex-col rounded-[22px] border border-slate-200/80 bg-white/95 p-3 shadow-[0_12px_32px_rgba(0,0,0,0.08)]">
+      <div className="mb-3 flex items-center justify-between gap-3 rounded-[18px] bg-brand-charcoal px-3 py-3 text-white">
         <div>
           <p className="text-[10px] uppercase tracking-[0.28em] text-brand-accent">Portfolio assistant</p>
           <p className="mt-1 text-[12px] leading-5 text-white/90">Ask about Prashant’s background, projects, or contact details.</p>

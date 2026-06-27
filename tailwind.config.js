@@ -4,8 +4,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        sans: [
+          "Inter",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "sans-serif",
+        ],
         mono: [
-          "__GeistMono_46451f",
           "ui-monospace",
           "SFMono-Regular",
           "Roboto Mono",
@@ -27,10 +35,10 @@ module.exports = {
         },
       },
       boxShadow: {
-        soft: "5px 5px 0px 0px rgba(0,0,0,1)",
-        bold: "8px 8px 0px 0px rgba(0,0,0,1)",
-        accent: "6px 6px 0px 0px rgba(255,45,26,1)",
-        strong: "10px 10px 0px 0px rgba(0,0,0,1)",
+        soft: "0 16px 44px rgba(17, 17, 17, 0.07)",
+        bold: "0 24px 70px rgba(17, 17, 17, 0.12)",
+        accent: "0 18px 45px rgba(255, 45, 26, 0.16)",
+        strong: "0 24px 70px rgba(17, 17, 17, 0.16)",
       },
       borderRadius: {
         xl: "8px",
